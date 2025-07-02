@@ -14,7 +14,7 @@ const variantStyles = {
     "secondary": "bg-purple-300 text-purple-400"
 }
 
-const defaultStyles = "rounded-lg";
+const defaultStyles = "rounded-lg flex items-center";
 
 const sizeStyles = {
     "sm" : "px-3 py-1",
@@ -28,5 +28,5 @@ export function Button(props : ButtonProps)
 {
     return <button onClick ={props.onClick} className={`${defaultStyles} ${variantStyles[props.variant]} 
     ${sizeStyles[props.size]}`}>
-        <span className="flex">{props.startIcon} <span className="px-3">{props.text}</span> {props.endIcon}</span></button>
+        {props.startIcon} <span className="px-3">{props.text}</span> {props.endIcon}</button>
 }
